@@ -6,9 +6,9 @@ services:
     ports:
       - "1883:1883"
     volumes:
-      - /home/joel/Documents/UNI/TFG/broker/mosquitto/config:/mosquitto/config
-      - /home/joel/Documents/UNI/TFG/broker/mosquitto/data:/mosquitto/data
-      - /home/joel/Documents/UNI/TFG/broker/mosquitto/log:/mosquitto/log
+      - ./broker/mosquitto/config:/mosquitto/config
+      - ./broker/mosquitto/data:/mosquitto/data
+      - ./broker/mosquitto/log:/mosquitto/log
     networks:
       IoTnet:
 
@@ -18,7 +18,7 @@ services:
     command: bash -c "apt update && apt install -y mosquitto-clients && apt install -y python3 && apt install -y python3-paho-mqtt && apt install -y net-tools && apt install -y iputils-ping && sleep infinity"
     privileged: true
     volumes:
-      - /home/joel/Documents/UNI/TFG/clients/cl1:/home/
+      - ./clients/cl1:/home/
     networks:
       IoTnet:
         ipv4_address: 192.168.0.100
@@ -29,7 +29,7 @@ services:
     command: bash -c "apt update && apt install -y mosquitto-clients && apt install -y python3 && apt install -y python3-paho-mqtt && apt install -y net-tools && apt install -y iputils-ping && sleep infinity"
     privileged: true
     volumes:
-      - /home/joel/Documents/UNI/TFG/clients/cl1:/home/
+      - ./clients/cl1:/home/
     networks:
       IoTnet:
         ipv4_address: 192.168.0.101
@@ -42,7 +42,7 @@ services:
       - DISPLAY=${DISPLAY}
     privileged: true
     volumes:
-      - /home/joel/Documents/UNI/TFG/observador:/home/
+      - ./observador:/home/
       - /tmp/.X11-unix:/tmp/.X11-unix
     networks:
       IoTnet:
