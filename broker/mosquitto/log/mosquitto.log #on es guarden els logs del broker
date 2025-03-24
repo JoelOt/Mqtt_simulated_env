@@ -10761,3 +10761,10 @@
 1742841354: Opening ipv6 listen socket on port 1883.
 1742841354: mosquitto version 2.0.20 running
 1742853417: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1742853726: mosquitto version 2.0.20 terminating
+1742853726: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1742854095: mosquitto version 2.0.20 starting
+1742854095: Config loaded from /mosquitto/config/mosquitto.conf.
+1742854095: Opening ipv4 listen socket on port 1883.
+1742854095: Opening ipv6 listen socket on port 1883.
+1742854095: mosquitto version 2.0.20 running
