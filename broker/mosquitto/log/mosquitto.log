@@ -1,0 +1,11 @@
+1740048718: mosquitto version 2.0.20 starting
+1740048718: Config loaded from /mosquitto/config/mosquitto.conf.
+1740048718: Starting in local only mode. Connections will only be possible from clients running on this machine.
+1740048718: Create a configuration file which defines a listener to allow remote access.
+1740048718: For more details see https://mosquitto.org/documentation/authentication-methods/
+1740048718: Opening ipv4 listen socket on port 1883.
+1740048718: Opening ipv6 listen socket on port 1883.
+1740048718: Error: Address not available
+1740048718: mosquitto version 2.0.20 running
+1740048792: mosquitto version 2.0.20 terminating
+1740048792: Saving in-memory database to /mosquitto/data//mosquitto.db.
