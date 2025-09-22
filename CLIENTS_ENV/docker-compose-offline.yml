@@ -1,0 +1,37 @@
+services:
+  client1:
+    image: client-mqtt-malaria
+    container_name: client1
+    privileged: true
+    volumes:
+      - ./clients/cl1:/home/
+    environment:
+      - ip_broker=${ip_broker}
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 8 -n 10000 -H $${ip_broker} -s 100 -q 2 -c "client1""
+    networks:
+      IoTnet:
+        ipv4_address: ${ip_cl1}
+
+  client2:
+    image: client-mqtt-malaria
+    container_name: client2
+    privileged: true
+    volumes:
+      - ./clients/cl1:/home/
+    environment:
+      - ip_broker=${ip_broker}
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 8 -n 10000 -H $${ip_broker} -s 100 -q 2 -c "client2""
+    networks:
+      IoTnet:
+        ipv4_address: ${ip_cl2}
+
+networks:
+  IoTnet:
+    driver: ipvlan
+    driver_opts:
+      parent: ${interface}
+    ipam:
+      config:
+        - subnet: ${net}${mask}
+          gateway: ${gw}
+          

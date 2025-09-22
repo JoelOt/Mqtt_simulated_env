@@ -1,0 +1,31 @@
+services:
+  client1:
+    image: kalilinux/kali-last-release 
+    container_name: client1
+    privileged: true
+    volumes:
+      - ./clients/cl1:/home/ 
+    command: >
+      bash -c "
+        apt update && cd /home/mqtt-malaria &&
+        apt install -y python2 curl fuse libfuse-dev &&
+        curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py &&
+        python2 get-pip.py &&
+        pip2 install paho-mqtt fusepy && python2 /home/mqtt-malaria/malaria publish -P 8 -n 10000 -H 192.168.0.22 -s 100 -t mqtt/test
+      "
+    networks:
+      IoTnet:
+
+  broker:
+    image: eclipse-mosquitto
+    container_name: broker
+    privileged: true
+    volumes:
+      - ./broker/mosquitto/config:/mosquitto/config
+      - ./broker/mosquitto/data:/mosquitto/data
+      - ./broker/mosquitto/log:/mosquitto/log
+    network_mode: host
+networks:
+  IoTnet:
+    driver: bridge
+          

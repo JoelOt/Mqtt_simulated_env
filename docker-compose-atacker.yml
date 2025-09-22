@@ -1,0 +1,16 @@
+ services:
+  observador:
+    image: kalitfg
+    container_name: observador
+    command: bash -c "sleep infinity"
+    environment:
+      - DISPLAY=${DISPLAY}
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 1883:1883
+    volumes:
+      - /home/joel/Documents/UNI/TFG/observador:/home/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host

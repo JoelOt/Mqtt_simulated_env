@@ -1,0 +1,9 @@
+# Nmap 7.80 scan initiated Sat Jun 14 19:02:15 2025 as: nmap -sn -oG devices.txt 192.168.0.0/24
+Host: 192.168.0.1 (mygpon)	Status: Up
+Host: 192.168.0.10 ()	Status: Up
+Host: 192.168.0.11 ()	Status: Up
+Host: 192.168.0.14 ()	Status: Up
+Host: 192.168.0.15 ()	Status: Up
+Host: 192.168.0.17 ()	Status: Up
+Host: 192.168.0.26 ()	Status: Up
+# Nmap done at Sat Jun 14 19:02:57 2025 -- 256 IP addresses (7 hosts up) scanned in 42.09 seconds

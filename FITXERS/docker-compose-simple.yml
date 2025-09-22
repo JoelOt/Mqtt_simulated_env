@@ -1,0 +1,23 @@
+services:
+  client1:
+    image: ubuntu:latest
+    container_name: client1
+    command: bash -c "apt update && sudo apt install mosquitto-clients && sleep infinity"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl1:/home/
+    networks:
+      - IoTnet
+  client2:
+    image: ubuntu:latest
+    container_name: client2
+    command: bash -c "apt update && sudo apt install mosquitto-clients && sleep infinity"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl2:/home/
+    networks:
+      - IoTnet
+
+networks:
+  IoTnet:
+    driver: bridge

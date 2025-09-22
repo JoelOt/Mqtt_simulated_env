@@ -1,0 +1,47 @@
+services:
+  broker:
+    image: eclipse-mosquitto
+    container_name: broker
+    privileged: true
+    ports:
+      - "1883:1883"
+    volumes:
+      - /home/joel/Documents/UNI/TFG/broker/mosquitto/config:/mosquitto/config
+      - /home/joel/Documents/UNI/TFG/broker/mosquitto/data:/mosquitto/data
+      - /home/joel/Documents/UNI/TFG/broker/mosquitto/log:/mosquitto/log
+    networks:
+      - IoTnet
+  client1:
+    image: mqttclient
+    container_name: client1
+    command: bash -c "apt update && sleep infinity"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl1:/home/
+    networks:
+      - IoTnet
+  client2:
+    image: mqttclient
+    container_name: client2
+    command: bash -c "apt update && sleep infinity"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl2:/home/
+    networks:
+      - IoTnet
+  atacant:
+    image: kalitfg
+    container_name: atacant
+    command: bash -c "apt update && sleep infinity"
+    environment:
+      - DISPLAY=${DISPLAY}
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/observador:/home/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - IoTnet
+
+networks:
+  IoTnet:
+    driver: bridge

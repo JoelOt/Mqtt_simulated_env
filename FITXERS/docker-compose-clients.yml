@@ -1,0 +1,33 @@
+services:
+  client1:
+    image: kalitfg
+    container_name: client1
+    command: bash -c "while true; do mosquitto_pub -h 10.4.39.104 -t "mqtt" -m "aaaa"; sleep 0.01; done"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl1:/home/
+    networks:
+      IoTnet:
+        ipv4_address: 10.4.39.202
+
+  client2:
+    image: kalitfg
+    container_name: client2
+    command: bash -c "sleep infinity"
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/clients/cl2:/home/
+    networks:
+      IoTnet:
+        ipv4_address: 10.4.39.201
+
+
+networks:
+  IoTnet:
+    driver: macvlan
+    driver_opts:
+      parent: wlp42s0
+    ipam:
+      config:
+        - subnet: 10.4.39.0/24
+          gateway: 10.4.39.1

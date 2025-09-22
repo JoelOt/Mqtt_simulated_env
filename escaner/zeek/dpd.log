@@ -1,0 +1,25 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dpd
+#open	2025-06-27-15-09-02
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	analyzer	failure_reason
+#types	time	string	addr	port	addr	port	enum	string	string
+1751036912.585704	CN4lmMgJzByNMktS8	192.168.0.201	44733	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 12290 > 48
+1751036913.514243	CSMZKR1rQqZ3XKBvi	192.168.0.200	56951	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 24885 > 69
+1751036913.791738	Ctho5w3jJSxkPm3Lih	192.168.0.200	41751	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 14664 > 54
+1751036914.073694	CncDpu2n3mg6bI3D1	192.168.0.201	59791	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 14133 > 97
+1751036914.485199	C2YCe3SFqA9K8MIi	192.168.0.200	55121	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 119 > 48
+1751036914.673424	CQ302e3NIGwL45vsh5	192.168.0.201	43847	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 12338 > 48
+1751036914.718721	CPxwwz2XZDgHLI3Hfe	192.168.0.201	42173	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 17767 > 100
+1751036916.602391	CGo0zuNaD67aa09zh	192.168.0.201	55045	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 13620 > 70
+1751036917.253887	CGKdY72pH7JFbtzGHb	192.168.0.201	38785	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 12594 > 47
+1751036918.139561	C6wYnl28Dsdw2TvIHf	192.168.0.200	57111	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 25699 > 47
+1751036919.188634	CuBZQd2w70GHvFH0g7	192.168.0.200	53729	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 12083 > 54
+1751036919.374821	Cy0HB44vHzIbAI1Pca	192.168.0.200	34077	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 25403 > 98
+1751036920.280276	C06EKn30EQBCgdn1w	192.168.0.201	52353	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 17717 > 55
+1751036920.540500	CfIdkB3EkggY8Y7MP7	192.168.0.201	58717	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 13123 > 56
+1751036920.583475	Ci4XEk4XBiEVRIsVhh	192.168.0.200	55177	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 12083 > 53
+1751036920.949842	CZd8CV1RX94CVUsQd1	192.168.0.200	33429	192.168.0.20	1883	tcp	MQTT	Binpac exception: binpac exception: out_of_bound: MQTT_string:str: 25155 > 100
+#close	2025-06-27-15-09-02

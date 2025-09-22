@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	weird
+#open	2025-06-27-15-04-03
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
+#types	time	string	addr	port	addr	port	string	string	bool	string	string
+1751036598.708949	CdgmQs1E36946zqCDk	192.168.0.26	53942	104.16.102.112	443	bad_TCP_checksum	-	F	zeek	TCP
+#close	2025-06-27-15-04-04

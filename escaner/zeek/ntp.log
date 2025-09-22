@@ -1,0 +1,11 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	ntp
+#open	2025-06-27-14-47-49
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	mode	stratum	poll	precision	root_delay	root_disp	ref_id	ref_time	org_time	rec_time	xmt_time	num_exts
+#types	time	string	addr	port	addr	port	count	count	count	interval	interval	interval	interval	string	time	time	time	time	count
+1751035603.406159	CRWfr6sp0VC1QYb9k	192.168.0.26	38415	185.125.190.58	123	4	3	0	1.000000	1.000000	0.000000	0.000000	\x00\x00\x00\x00	0.000000	0.000000	0.000000	1751035603.094523	0
+1751035603.444714	CRWfr6sp0VC1QYb9k	192.168.0.26	38415	185.125.190.58	123	4	4	2	1.000000	0.000000	0.000992	0.000397	183.160.133.132	1751035349.288002	1751035603.094523	1751035603.415244	1751035603.415264	0
+#close	2025-06-27-14-47-49

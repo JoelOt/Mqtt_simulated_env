@@ -1,0 +1,122 @@
+services:
+  client1:
+    image: kalilinux/kali-last-release
+    container_name: client1
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 t -H 192.168.0.15 -s 100 -q 2 -c cl1"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.101
+
+  client2:
+    image: kalilinux/kali-last-release
+    container_name: client2
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -t -H 192.168.0.15 -s 100 -q 2 -c cl2"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.102
+
+  client3:
+    image: client-mqtt-malaria
+    container_name: client3
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -t -H 192.168.0.15 -s 100 -q 2 -c cl3"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.103
+
+  client4:
+    image: client-mqtt-malaria
+    container_name: client4
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -H 192.168.0.15 -s 100 -q 2 -c cl4"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.104
+
+  client5:
+    image: client-mqtt-malaria
+    container_name: client5
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -H 192.168.0.15 -s 100 -q 2 -c cl5"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.105
+
+  client6:
+    image: client-mqtt-malaria
+    container_name: client6
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -H 192.168.0.15 -s 100 -q 2 -c cl6"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.106
+
+  client7:
+    image: client-mqtt-malaria
+    container_name: client7
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -H 192.168.0.15 -s 100 -q 2 -c cl7"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.107
+
+  client8:
+    image: client-mqtt-malaria
+    container_name: client8
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -H 192.168.0.15 -s 100 -q 2 -c cl8"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.108
+    
+  client9:
+    image: client-mqtt-malaria
+    container_name: client9
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -t -H 192.168.0.15 -s 100 -q 2 -c cl9"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.109
+      
+  client10:
+    image: kalilinux/kali-last-release
+    container_name: client10
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "python2 /home/mqtt-malaria/malaria publish -P 1 -n 50 -t -H 192.168.0.15 -s 100 -q 2 -c cl10"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.110
+
+networks:
+  IoTnet:
+    driver: macvlan
+    driver_opts:
+      parent: wlp42s0
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
+          gateway: 192.168.0.1
+          
+          

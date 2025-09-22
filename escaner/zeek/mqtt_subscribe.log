@@ -1,0 +1,11 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	mqtt_subscribe
+#open	2025-06-27-14-44-33
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	action	topics	qos_levels	granted_qos_level	ack
+#types	time	string	addr	port	addr	port	enum	vector[string]	vector[count]	count	bool
+1751035416.168767	C8BdUH37nGS6b5Gct7	192.168.0.19	50988	192.168.0.20	1883	MQTT::SUBSCRIBE	mqtt	0	0	T
+1751035416.167193	CZpIZy9LJTqfNNzld	192.168.0.19	60800	192.168.0.20	1883	MQTT::SUBSCRIBE	mqtt	0	0	T
+#close	2025-06-27-14-44-33

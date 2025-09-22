@@ -1,0 +1,22 @@
+services:
+  client1:
+    image: kalilinux/kali-last-release
+    container_name: client1
+    privileged: true
+    volumes:
+      - /home/joel/Documents/UNI/TFG/CLIENTS_ENV/clients/cl1:/home/
+    command: bash -c "sleep infinity"
+    networks:
+      IoTnet:
+        ipv4_address: 192.168.0.101
+
+networks:
+  IoTnet:
+    driver: ipvlan
+    driver_opts:
+      parent: wlp42s0
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
+          gateway: 192.168.0.1
+          

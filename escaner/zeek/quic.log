@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	quic
+#open	2025-06-27-15-09-02
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	client_initial_dcid	client_scid	server_scid	server_name	client_protocol	history
+#types	time	string	addr	port	addr	port	string	string	string	string	string	string	string
+1751036918.680177	CHqDoI2PrdwXssNCH7	192.168.0.26	43813	142.250.200.67	443	1	806f4c0e416007c0	(empty)	e06f4c0e416007c0	-	-	IIZZiiIishHi
+1751036906.327872	CXzaV61BbQmFQqkX7g	192.168.0.26	57964	142.250.185.10	443	1	7435f0aa8a86b3db	(empty)	f435f0aa8a86b3db	-	-	IIIZZiiiiIishIHihH
+1751036905.707081	Ckz0V52GZNUBG0eJZ9	192.168.0.26	35890	35.190.80.1	443	1	11f0f95c4d5b9842	(empty)	f1f0f95c4d5b9842	-	-	IIiiIisIiH
+#close	2025-06-27-15-09-02
